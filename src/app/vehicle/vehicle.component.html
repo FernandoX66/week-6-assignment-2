@@ -1,0 +1,22 @@
+<div class="car">
+  <div class="car-details">
+    <div class="car-main-info">
+      <div class="car-logo">
+        <img [src]="logo" />
+      </div>
+      <div class="car-info">
+        <h2>
+          {{ brand }}<span> - {{ model }} ({{ releaseYear }})</span>
+        </h2>
+      </div>
+    </div>
+    <p><span>Engine: </span>{{ engineDescription }}</p>
+    <p><span>Weight: </span>{{ weight | number }} lbs</p>
+    <h3>{{ price | currency }}</h3>
+  </div>
+  <div class="car-images">
+    <div *ngFor="let image of carImages" class="car-image">
+      <img [src]="image" />
+    </div>
+  </div>
+</div>

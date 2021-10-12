@@ -1,0 +1,58 @@
+<div class="vehicles-div">
+  <div *ngFor="let category of vehiclesCategory; let i = index">
+    <div *ngIf="i === 0" class="category-container" id="american-cars">
+      <a href="#american-cars">{{ category }}</a>
+      <div class="car-cards">
+        <div *ngFor="let car of americanCars" class="car-card">
+          <app-vehicle
+            [releaseYear]="car.releaseYear"
+            [brand]="car.brand"
+            [model]="car.model"
+            [engineDescription]="car.engineDescription"
+            [weight]="car.weight"
+            [price]="car.price"
+            [logo]="car.logo"
+            [carImages]="car.carImages"
+          ></app-vehicle>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="i === 1" class="category-container" id="japanese-cars">
+      <a href="#japanese-cars">{{ category }}</a>
+      <div class="car-cards">
+        <div *ngFor="let car of japaneseCars" class="car-card">
+          <app-vehicle
+            [releaseYear]="car.releaseYear"
+            [brand]="car.brand"
+            [model]="car.model"
+            [engineDescription]="car.engineDescription"
+            [weight]="car.weight"
+            [price]="car.price"
+            [logo]="car.logo"
+            [carImages]="car.carImages"
+          ></app-vehicle>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="i === 2" class="category-container" id="germany-cars">
+      <a href="#germany-cars">{{ category }}</a>
+      <div class="car-cards">
+        <div *ngFor="let car of germanyCars" class="car-card">
+          <app-vehicle
+            [releaseYear]="car.releaseYear"
+            [brand]="car.brand"
+            [model]="car.model"
+            [engineDescription]="car.engineDescription"
+            [weight]="car.weight"
+            [price]="car.price"
+            [logo]="car.logo"
+            [carImages]="car.carImages"
+          ></app-vehicle>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a href="#" class="collapse-link">Collapse</a>
+  </div>
+</div>
