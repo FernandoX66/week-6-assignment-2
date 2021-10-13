@@ -11,7 +11,7 @@
       </div>
     </div>
     <p><span>Engine: </span>{{ engineDescription }}</p>
-    <p><span>Weight: </span>{{ weight | number }} lbs</p>
+    <p><span>Weight: </span>{{ weight * 0.453592 | number: ".0-0" }} kg</p>
     <h3>{{ price | currency }}</h3>
   </div>
   <div class="car-images">
